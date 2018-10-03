@@ -1,0 +1,211 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Шкільний сайт</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="styles.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="images/emblema1.png" rel="shortcut icon" type="image/x-icon"/>
+</head>
+<body>
+<div id="content">
+<!-- header begins -->
+<div id="header">
+ <div id="menu1">
+  <div id="menu">
+		<ul>
+			<li><a href="index.html">  Домашня</a></li>
+			<li><a href="study.html">  Навчальна</a></li>
+			<li><a href="gallery.html">Галерея</a></li>
+			<li><a href="fleshka.html"> Тести</a></li>
+			<li><a href="filma.html">Фільм</a></li>
+			<li><a href="contact.html">Контакти</a></li>
+
+		</ul>
+	</div>
+ </div>
+<div id="hit_area" onmouseover="toggleDown();"></div>
+  
+	<div id="logo">
+		<h1><a href="index.html"></a></h1>
+	</div>
+</div>
+<!-- header ends -->
+<!-- content begins -->
+ <div id="main">
+	<div id="right">
+		<h2>Сторінка контактів</h2><br />
+			<h4><a href="#">Адміністрація школи</a></h4><br />
+			Директор нашої школи - Коротка Світлана Миколаївна.
+			Це вчитель вищої категорії, вчитель-методист. 
+            Нагороджена нагрудним знаком “Відмінник освіти України”, медаллю “Василь Сухомлинський” 
+            та почесним знаком “За заслуги перед містом” ІІ степеня. 
+			<p> </p>
+			<img src="images/111.jpg">
+			<ul>
+			<lh><b><i>Заступники директора </b></i></lh>
+			<li> Савіцька Т.Г. </li>
+			<li> Федор Н.М.    </li>
+			<li> Тишинська З.В.</li>
+			<li> Клєвцова Л.А. </li>
+			<li> Івахнова О.О. </li>
+			<li> Моргалюк М.М. </li>
+			</ul>
+			<p> </p>
+	
+			<h4><a href="#">Наші контакти</a></h4><br />
+			<iframe src="https://www.google.com/maps/d/embed?mid=1712QzlEOJTVtFoXY3-0ZPpcHBzg" width="640" height="480"></iframe>
+			<p>Адреса старшої школи:</p>
+			<p>м. Житомир, проспект Миру 27, тел. 25-98-98</p>
+			<p>Адреса молодшої школи вул. Клосовського 19</p>
+			<p>тел 25-93-00</p>
+			<p>e-mail school27zt@gmail.com</p>
+			<p> <a href="http://27.zosh.zt.ua/">site: http://27.zosh.zt.ua/ </a></p>
+</p>
+				<p> </p>
+			
+			</div>
+	<div id="left">
+		<h3>Як дізнатися більше?</h3>
+			<p>Відвідайте наш міський сайт школярів, і ви дізнаєтеся багато цікавого!  <a href="http://cool-school.at.ua/">Перейти...</a></p>
+			<br />
+			<h3>Зміст сайту</h3>
+			<ul>
+				<li><ul>
+					<li><a href="index.html">  Домашня</a></li>
+			<li><a href="study.html">  Навчальна</a></li>
+			<li><a href="gallery.html">Галерея</a></li>
+			<li><a href="fleshka.html">Тести</a></li>
+			<li><a href="filma.html">Фільм</a></li>
+			<li><a href="contact.html">Контакти</a></li>
+
+				</ul>
+			  </li>
+			</ul>
+			<br />
+			<h3>Календар</h3>
+			<ul>
+				<li id="calendar">			
+				<div id="calendar1">
+					<script language="JavaScript">
+<!--
+<!-- Begin
+monthnames = new Array(
+"Січень",
+"Лютий",
+"Березень",
+"Квітень",
+"Травень",
+"Червень",
+"Липень",
+"Серпень",
+"Вересень",
+"Жовтень",
+"Листопад",
+"Грудень");
+var linkcount=0;
+function addlink(month, day, href) {
+var entry = new Array(3);
+entry[0] = month;
+entry[1] = day;
+entry[2] = href;
+this[linkcount++] = entry;
+}
+Array.prototype.addlink = addlink;
+linkdays = new Array();
+monthdays = new Array(12);
+monthdays[0]=31;
+monthdays[1]=28;
+monthdays[2]=31;
+monthdays[3]=30;
+monthdays[4]=31;
+monthdays[5]=30;
+monthdays[6]=31;
+monthdays[7]=31;
+monthdays[8]=30;
+monthdays[9]=31;
+monthdays[10]=30;
+monthdays[11]=31;
+todayDate=new Date();
+thisday=todayDate.getDay();
+thismonth=todayDate.getMonth();
+thisdate=todayDate.getDate();
+thisyear=todayDate.getYear();
+thisyear = thisyear % 100;
+thisyear = ((thisyear < 50) ? (2000 + thisyear) : (1900 + thisyear));
+if (((thisyear % 4 == 0)
+&& !(thisyear % 100 == 0))
+||(thisyear % 400 == 0)) monthdays[1]++;
+startspaces=thisdate;
+while (startspaces > 7) startspaces-=7;
+startspaces = thisday - startspaces + 1;
+if (startspaces < 0) startspaces+=7;
+document.write("<table border=1 bgcolor=#F6F6F6 bordercolor=#6699CC>");
+document.write("<tr><td colspan=7 align=center><b><font size=2>" + monthnames[thismonth] + " " + thisyear + "</font></b></td></tr>");
+document.write("<tr>");
+document.write("<td align=center><font size=2>Нед</font></td>");
+document.write("<td align=center><font size=2>Пон</font></td>");
+document.write("<td align=center><font size=2>Вів</font></td>");
+document.write("<td align=center><font size=2>Сер</font></td>");
+document.write("<td align=center><font size=2>Чет</font></td>");
+document.write("<td align=center><font size=2>Пят</font></td>");
+document.write("<td align=center><font size=2>Суб</font></td>");
+document.write("</tr>");
+document.write("<tr>");
+for (s=0;s<startspaces;s++) {
+document.write("<td></td>");
+}
+count=1;
+while (count <= monthdays[thismonth]) {
+for (b = startspaces;b<7;b++) {
+linktrue=false;
+document.write("<td><font size=2>");
+for (c=0;c<linkdays.length;c++) {
+if (linkdays[c] != null) {
+if ((linkdays[c][0]==thismonth + 1) && (linkdays[c][1]==count)) {
+document.write("<a href=\"" + linkdays[c][2] + "\">");
+linktrue=true;}
+}
+}
+if (count==thisdate) {
+document.write("<font color='FF0000'><b>");
+}
+if (count <= monthdays[thismonth]) {
+document.write(count);
+}
+else {
+document.write(" ");
+}
+if (count==thisdate) {
+document.write("</b></font>");
+}
+if (linktrue)
+document.write("</a>");
+document.write("</font></td>");
+count++;
+}
+document.write("</tr>");
+startspaces=0;
+}
+document.write("</table>");
+// End
+// -->
+</script>
+					
+				</div>
+			</li>
+		  </ul>
+	</div>
+	
+
+
+	</div>
+
+<div id="footer">
+<p> Вироблено в ЗОШ №27 </p> 
+<p> Автор: Кривульський Ілля </p> 
+<p> Житомир 2018 </p> 
+</div>
+<!-- footer ends-->
+</body>
+</html>
