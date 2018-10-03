@@ -1,0 +1,134 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Шкільний сайт</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="styles.css" rel="stylesheet" type="text/css" media="screen" />
+
+<link href="images/emblema1.png" rel="shortcut icon" type="image/x-icon"/>
+
+
+<link rel="stylesheet" media="all" href="style/css/prettyPhoto.css" type="text/css" />
+  <link rel="stylesheet" media="all" href="style/css/tipTip.css" type="text/css" />
+  <link rel="stylesheet" href="style/css/nivo-slider.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="style/css/nivostyle.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="style/css/tests.css" type="text/css" media="screen" />
+  <script type="text/javascript" src="style/js/jquery-1.5.min.js"></script>
+  <script type="text/javascript" src="style/js/quicksand.js"></script>
+  <script type="text/javascript" src="style/js/scripts.js"></script>
+  <script type="text/javascript" src="style/js/jquery.prettyPhoto.js"></script>
+ <!-- <script type="text/javascript" src="http://twitterjs.googlecode.com/svn/trunk/src/twitter.min.js"></script>-->
+  <script src="style/js/jquery.form.js" type="text/javascript" charset="utf-8"></script>
+  <script src="style/js/knockout-3.4.0.js" type="text/javascript" charset="utf-8"></script>
+  <script src="style/js/viewmodel.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+//<![CDATA[
+  $(document).ready(function() {
+  $('#submitform').ajaxForm({
+  target: '#error',
+  success: function() {
+  $('#error').fadeIn('slow');
+  }
+  });
+  });
+  //]]>
+  </script>
+
+
+</head>
+<body>
+<div id="content">
+<!-- header begins -->
+<div id="header">
+ <div id="menu1">
+  <div id="menu">
+		<ul>
+			<li><a href="index.html">  Домашня</a></li>
+			<li><a href="study.html">  Навчальна</a></li>
+			<li><a href="gallery.html">Галерея</a></li>
+			<li><a href="fleshka.html">Тести</a></li>
+			<li><a href="filma.html">Фільм</a></li>
+			<li><a href="contact.html">Контакти</a></li>
+
+		</ul>
+	</div>
+ </div>
+<div id="hit_area" onmouseover="toggleDown();"></div>
+  
+	<div id="logo">
+		<h1><a href="#"></a></h1>
+		<h2><a href="http://www.metamorphozis.com/" id="metamorph"></a></h2>
+	</div>
+</div>
+<!-- header ends -->
+<!-- content begins -->
+ <div id="main">
+	
+	          <h1>Тести</h1>
+          <div class="test-countainer">
+            <div class="loading" data-bind="visible: isLoading">
+              <img src="style/images/loader.gif" align="middle">
+            </div>
+            <ul data-bind="foreach: tests, visible: !isInTesting()" class="menu-item">
+              <li><button data-bind="click: $parent.loadTest, html: name"></button></li>
+            </ul>
+
+            <!-- ko if: isInTesting() -->
+            <div class="test-content">
+              <span class="label">Питання №<span data-bind="text: currentTestIndex() + 1"></span> з <strong data-bind="text: questionCount()"></strong></span>
+              <button class="finish" data-bind="click: finish">Завершити тест</button>
+              <button class="go" data-bind="click: goToMain">Перейти до вибору тестів</button>
+              <div data-bind="with: currentTest()[currentTestIndex()]">
+                <p class="question"><strong data-bind="html: question"></strong></p>
+                <p><img data-bind="attr: {src: img}" /></p>
+                <!-- ko if: type === 1-->
+                <ul data-bind="foreach: answers" class="answers">
+                  <li>
+                    <input type="radio" data-bind="attr:{ name: $parent.question },checkedValue: $data, checked: $parent.currentAnswer" />
+                    <label data-bind="text: $data"></label>
+                  </li>
+                </ul>
+                <!-- /ko -->
+                <!-- ko if: type === 2-->
+                <input type="text" data-bind="textInput: currentAnswer" />
+                <!-- /ko -->
+                <!-- ko if: type === 3-->
+                <ul data-bind="foreach: answers" class="answers">
+                  <li>
+                    <label data-bind="text: val"></label>  - <select data-bind="options: $parent.answers2,optionsCaption:'Виберіть варіант зі списку', value: userVal"></select>
+                  </li>
+                </ul>
+                <!-- /ko -->
+              </div>
+              <button class="switch left" data-bind="click: prevQuestion, visible: (currentTestIndex()!==0)">Попереднє питання</button>
+              <button class="switch right" data-bind="click: nextQuestion, visible: ((currentTestIndex()+1) !== questionCount())">Наступне питання</button>
+            </div>
+            <!-- /ko -->
+          </div>
+
+
+          <div class="one-half"></div>
+
+          <div class="one-half last">
+          
+		  <ul class="bullet">
+
+
+          <ul class="check_list">
+            </div>
+
+          <div class="clear"></div>
+
+          </div>
+
+	
+
+<div id="footer">
+<p> Вироблено в ЗОШ №27 </p> 
+<p> Автор: Кривульський Ілля </p> 
+<p> Житомир 2018 </p> 
+</div>
+<!-- footer ends-->
+</body>
+</html>
